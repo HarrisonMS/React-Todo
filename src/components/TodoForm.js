@@ -29,7 +29,7 @@ class TodoForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="item">New Item</label>
+        <label htmlFor="item">Add Todo</label>
         <input
           type="text"
           name="item"
