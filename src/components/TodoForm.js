@@ -20,11 +20,11 @@ class TodoForm extends React.Component {
     this.props.addItem(this.state.newItem);
     this.setState({ newItem: '' });
   };
-  clearCompleted = e => {
-    e.preventDefault();
-    let todos = this.state.todos.filter(item => !item.completed);
-    this.setState({todos})
-  }
+//   clearCompleted = e => {
+//     e.preventDefault();
+//     let todos = this.state.todos.filter(item => !item.completed);
+//     this.setState({todos})
+//   }
 
   render() {
     return (

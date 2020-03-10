@@ -55,7 +55,7 @@ h1 {
   flex-flow: row wrap;
   justify-content: space-between;
   width: 100%;
-  margin: 0 auto;
+  margin: 16px auto;
 }
 .item {
   background-color: black;
@@ -69,9 +69,10 @@ h1 {
 }
 
 .item.completed {
-  background-color: rgb(0, 0, 0);
-  color: red;
-  text-decoration: line-through;
+  background-color:rgb(104, 11, 11);
+  color: black;
+  text-decoration-line: line-through;
+  
   
 }
 form {
@@ -112,5 +113,6 @@ input::placeholder {
 .buttonClear {
     height: 40px;
   margin-top: 16px;
+  margin-bottom: 16px;
   font-size: 20px;
 }
