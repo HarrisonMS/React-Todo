@@ -8,8 +8,8 @@ body {
 }
 
 body {
-    background: rgb(22,0,36);
-    background: linear-gradient(180deg, rgba(22,0,36,1) 0%, rgba(61,9,121,1) 60%, rgb(80, 16, 109) 100%);
+  background: rgb(139,67,244);
+  background: linear-gradient(0deg, rgba(139,67,244,1) 0%, rgba(35,0,85,1) 76%);
 }
 
 h1,
@@ -41,9 +41,10 @@ p{
   align-items: center;
   align-content: left;
 }
-.formWrapper {
+.buttonWrapper {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: row nowrap;
+    align-items: left;
     justify-content: space-between;
 }
 h1 {
@@ -104,15 +105,23 @@ button {
   color: rgb(217, 255, 0);
   font-size: 16px;
   padding: 6px 10px;
+  width: fit-content
+ 
 }
 
 input::placeholder {
   color: black;
 }
+.label{
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+  
+  
+}
+.button2 {
 
-.buttonClear {
-    height: 40px;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   font-size: 20px;
 }

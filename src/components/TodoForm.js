@@ -29,7 +29,7 @@ class TodoForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <label htmlFor="item">Add Todo</label>
+        <label className="label" htmlFor="item">Add Todo</label>
         <input
           type="text"
           name="item"
@@ -37,7 +37,7 @@ class TodoForm extends React.Component {
           value={this.state.newItem}
           onChange={this.handleChanges}
         />
-        <button>Add</button>
+        <button className="button">Add</button>
         
       </form>
     );

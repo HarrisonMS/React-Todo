@@ -48,7 +48,7 @@ class App extends React.Component {
       return task.name.toLowerCase().search(e.target.value.toLowerCase()) !== -1;
     });
     this.setState({
-      tasks: tasks
+      todos: tasks
     })
   }
 
@@ -91,6 +91,12 @@ class App extends React.Component {
     this.setState({
     todos: JSON.parse(window.localStorage.getItem('todos'))
   })}
+  // componentDidMount() {
+  //   fetch(data)
+  //     .then(res => res.json())
+  //     .then(tasks => this.setState({ todos: tasks }))
+  //     .catch(err => console.log("noooo"));
+  // }
  
   render() { if (this.state.tasks.length > 0){
     console.log('rendering...', this.state);
@@ -99,19 +105,20 @@ class App extends React.Component {
       <div className="header">
         <h1>Todo List</h1>
       </div>
-      <div className="formWrapper">
+      <div className="buttonWrapper">
         <TodoForm addItem={this.addItem} />
-        <button className="buttonSave" onClick={this.handleTasksSave}>
+        <button className="button2" onClick={this.handleTasksSave}>
           Save Todos
         </button>
-        <button className="buttonSave" onClick={this.fetchLocalStorage}>
+        <button className="button2" onClick={this.fetchLocalStorage}>
          Load Todos
         </button>
-        <button className="buttonClear" onClick={this.clearCompleted}>
+        <button className="button2" onClick={this.clearCompleted}>
           Clear Completed Todos
         </button>
         <form onChange={this.filterList}>
-        <input type="text" placeholder="Search" name="search" id="search"/>
+      <label className="label" htmlFor="item">Search</label>
+        <input type="text"  name="search" id="search"/>
       </form>
     </div>
       <FilteredList
@@ -125,21 +132,23 @@ class App extends React.Component {
         <div className="header">
           <h1>Todo List</h1>
         </div>
-        <div className="formWrapper">
         <TodoForm addItem={this.addItem} />
-        <button className="buttonSave" onClick={this.handleTasksSave}>
+        <div className="buttonWrapper">
+        <button className="button2" onClick={this.handleTasksSave}>
           Save Todos
         </button>
-        <button className="buttonSave" onClick={this.fetchLocalStorage}>
+        <button className="button2" onClick={this.fetchLocalStorage}>
          Load Todos
         </button>
-        <button className="buttonClear" onClick={this.clearCompleted}>
+        <button className="button2" onClick={this.clearCompleted}>
         Clear Completed Todos
       </button>
-      <form onChange={this.filterList}>
-        <input type="text" placeholder="Search" name="search" id="search"/>
-      </form>
       </div>
+      <form onChange={this.filterList}>
+      <label className="label" htmlFor="item">Search</label>
+        <input type="text"  name="search" id="search"/>
+      </form>
+      
         <TodoList
           toggleCompleted={this.toggleCompleted}
           todos={this.state.todos}
